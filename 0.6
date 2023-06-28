@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of the browser: The browser adds the data to the node list and re-renders it.
+    
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+    Note right of the browser: The server adds this node as a json string onto the dataset on the server so that other people will be able to access your node.
